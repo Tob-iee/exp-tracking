@@ -41,7 +41,6 @@ parser.add_argument("-en",
                     dest= "exp_name",
                     help="defines the experiment name to start",
                     default="Hand_Signs_Exp1",
-                    required=True,
                     type=str)
 parser.add_argument("-dt",
                     dest= "dagshub_train",
