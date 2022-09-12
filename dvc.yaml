@@ -1,0 +1,13 @@
+stages:
+  ELT:
+    cmd: python src/data_preprocessor.py -s train test valid -o "./data_store/data/American
+      Sign Language Letters.v1-v1.tfrecord"
+    deps:
+    - src/data_preprocessor.py
+    outs:
+    - ./data_store/data/American Sign Language Letters.v1-v1.tfrecord
+  feature_tranform-train:
+    cmd: python src/train.py -dt True -en ${MLFLOW_EXPERIMENT_NAME}
+    deps:
+    - ./data_store/data/American Sign Language Letters.v1-v1.tfrecord/
+    - src/train.py
