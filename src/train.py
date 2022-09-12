@@ -192,7 +192,6 @@ def main():
 
   client = MlflowClient()
   client_list = client.list_experiments()
-  search_exp = client.get_experiment_by_name(EXPERIMENT_NAME)
   print(client_list)
 
   search_exp = None
