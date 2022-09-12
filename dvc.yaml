@@ -7,7 +7,7 @@ stages:
     outs:
     - ./data_store/data/American Sign Language Letters.v1-v1.tfrecord
   feature_tranform-train:
-    cmd: python src/train.py -dt True -en ${MLFLOW_EXPERIMENT_NAME}
+    cmd: python src/train.py -dt True
     deps:
     - ./data_store/data/American Sign Language Letters.v1-v1.tfrecord/
     - src/train.py
