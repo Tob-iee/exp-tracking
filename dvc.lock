@@ -9,16 +9,16 @@ stages:
       size: 5663
     outs:
     - path: ./data_store/data/American Sign Language Letters.v1-v1.tfrecord
-      md5: cc5e9d34eaf671d49cb4aa930028928a.dir
+      md5: e003c1c606241267ca159da3422c874f.dir
       size: 42577489
       nfiles: 3
   feature_tranform-train:
     cmd: python src/train.py -dt True
     deps:
     - path: ./data_store/data/American Sign Language Letters.v1-v1.tfrecord/
-      md5: cc5e9d34eaf671d49cb4aa930028928a.dir
+      md5: e003c1c606241267ca159da3422c874f.dir
       size: 42577489
       nfiles: 3
     - path: src/train.py
-      md5: caeb7afb5e728eba0951df9e99260c6c
-      size: 9564
+      md5: d3944d690c0d30bcd6f9661d261aa834
+      size: 9118
